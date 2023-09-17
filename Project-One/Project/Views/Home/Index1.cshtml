@@ -1,0 +1,48 @@
+﻿@model Project.Models.Domain.contact
+  
+
+@{
+}
+
+<body>
+    <div style="max-width: 900px; margin: 0 auto; height: 100vh;">
+        <div class="row p-5 bg-white rounded">
+            <h1 class="title text-center mb-1">Contact Us</h1>
+
+            <p class="title text-center mb-4">We Look Forward to hearing from you! </p>
+            <div class="col-md-6 d-flex align-items-center">
+                <img class="img-fluid" src="https://i.pinimg.com/originals/77/75/5e/77755e565ef7ddbff2546231cd8732bf.png" />
+            </div>
+            <div class="col-md-6">
+                <form asp-controller="Home" asp-action="Index1" method="post">
+                    <div class="form-group position-relative">
+                        <label for="formName" class="d-block">
+                            <i class="icon" data-feather="user"></i>
+                        </label>
+                        <input type="text" class="form-control thick" required pattern="[A-Za-z]+" asp-for="FirstName" placeholder="Frist Name">
+                    </div>
+                    <br>
+               
+                    <div class="form-group position-relative">
+                       
+                        <input type="text" class="form-control  thick" required pattern="[A-Za-z]+" placeholder="Last Name" asp-for="LastName">
+                    </div>
+                    <br>
+                    <div class="form-group position-relative">
+                       
+                        <input type="number" class="form-control  thick" maxlength="10" placeholder="Telepohone" asp-for="Telephone">
+                    </div>
+                    <br>
+                    <div class="form-group position-relative">
+                        
+                        <input type="email"  class="form-control  thick" placeholder="E-mail" asp-for="Email">
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-bg-1 w-100" tabIndex="-1">submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
